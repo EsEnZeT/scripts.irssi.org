@@ -338,7 +338,7 @@ sub ag_getpacks			#if ($m =~ m{#(\d+):})
 			{
 				my $filename = $2;
 				$filename =~ tr/[ ']/[__]/;
-				if ($n eq "$bots[$botcounter] $1" or $n eq $filename) {$newpackflag = 0;}
+				if ($n eq "$bots[$botcounter] $1" or $n eq $filename) {$newpackflag = 0;} else {$newpackflag = 1;}
 				last if ($n eq "$bots[$botcounter] $1");
 			}
 			if($newpackflag){push(@{$packs[$botcounter]}, $1);}	#push all new pack numbers to list of packs
